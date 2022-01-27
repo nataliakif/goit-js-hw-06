@@ -22,3 +22,21 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+ul {
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+  display: flex;
+  margin: -20px;
+
+}
+li {
+  margin: 20px;
+  border: 5px #212121 solid;
+}
+img {
+  display: block;
+  width: 420px;
+  height: 230px;
+}
