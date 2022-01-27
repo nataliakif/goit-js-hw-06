@@ -12,21 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const makeGalleryList = images =>{
-  return images.map(element => { 
-    const galleryItemEl = document.createElement('li');
-    const galleryImgEl = document.createElement('img');
-    galleryImgEl.src = element.url;
-    galleryImgEl.alt = element.alt;
-    galleryItemEl.appendChild(galleryImgEl);
+//ЧЕРЕЗ APPEND
+// const makeGalleryList = images =>{
+//   return images.map(element => { 
+//     const galleryItemEl = document.createElement('li');
+//     const galleryImgEl = document.createElement('img');
+//     galleryImgEl.src = element.url;
+//     galleryImgEl.alt = element.alt;
+//     galleryItemEl.appendChild(galleryImgEl);
 
-    return galleryItemEl;
+//     return galleryItemEl;
+// });
+// }
+// const galleryEl = document.querySelector('.gallery');
+// galleryEl.append(...makeGalleryList(images));
+// console.log(...makeGalleryList(images));
+
+
+const galleryListEl = [];
+images.forEach((image) => {
+  galleryListEl.push(`<li><img src="${image.url}" alt="${image.alt}"></li>`);
 });
-}
-console.log(...makeGalleryList(images));
-
-
-
 const galleryEl = document.querySelector('.gallery');
-//  galleryEl.append(...makeGalleryList(images));
-galleryEl.insertAdjacentHTML('afterbegin', ...makeGalleryList(images));
+galleryEl.insertAdjacentHTML('afterbegin', galleryListEl.join());
+    
+
