@@ -6,7 +6,7 @@ const refs = {
 refs.inputEl.addEventListener('input', onInputChange);
 function onInputChange(event){
     if(!event.currentTarget.value){
-        return refs.outputEl.textContent = 'Anonymus';
+        return refs.outputEl.textContent = 'Anonymous';
     } 
     console.log(event.currentTarget.value);
     refs.outputEl.textContent = event.currentTarget.value;
