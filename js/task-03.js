@@ -32,7 +32,7 @@ const images = [
 
 const galleryListEl = [];
 images.forEach((image) => {
-  galleryListEl.push(`<li><img src="${image.url}" alt="${image.alt}"></li>`);
+  galleryListEl.push(`<li class='gallery-item'><img src="${image.url}" alt="${image.alt}"></li>`);
 });
 const galleryEl = document.querySelector('.gallery');
 galleryEl.insertAdjacentHTML('afterbegin', galleryListEl.join());

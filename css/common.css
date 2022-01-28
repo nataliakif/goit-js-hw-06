@@ -23,15 +23,12 @@ button {
   cursor: pointer;
 }
 
-ul {
-  margin: 0;
-  padding: 15px;
+.gallery{
   list-style: none;
   display: flex;
   margin: -20px;
-
 }
-li {
+.gallery-item{
   margin: 20px;
   border: 5px #212121 solid;
 }
@@ -51,4 +48,9 @@ img {
 
 #validation-input.invalid {
   border-color: #f44336;
+}
+#boxes{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; 
 }

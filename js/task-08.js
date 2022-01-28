@@ -10,13 +10,14 @@ function onFormSubmit(event){
     event.preventDefault();
      if ( refs.inputEmail.value == '' || refs.inputPass.value == '' ) {
             alert ( 'All fields must be filled' );
-    }
+    }else{
     const formElements = event.currentTarget.elements;
     const mail = formElements.email.value;
     const password =formElements.password.value;
     const formData = {mail, password};
     console.log(formData);
     event.currentTarget.reset();
+    }
 }
 
 
