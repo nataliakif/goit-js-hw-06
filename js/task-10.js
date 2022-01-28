@@ -2,9 +2,9 @@ const refs ={
     boxes: document.querySelectorAll('#boxes'),
     createBtn: document.querySelector('[data-create]'),
     destroyBtn: document.querySelector('[data-destroy]'),
-    divAmountEl: document.querySelector('[type="number"]'),
+    divAmountEl: document.querySelector('input'),
 }
-
+console.log(refs.divAmountEl.value)
 refs.createBtn.addEventListener('click', takeDivAmout);
 refs.destroyBtn.addEventListener('click', destroyBoxes);
 

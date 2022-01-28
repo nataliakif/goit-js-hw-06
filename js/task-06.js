@@ -5,7 +5,10 @@
  inputEl.addEventListener('blur', onInputBlur);
     function onInputBlur(event){
         if(event.currentTarget.value.length == attributeValue){
-            return inputEl.classList.add("valid")
-        }    
-        inputEl.classList.add("invalid")
+            event.currentTarget.classList.add("valid");
+            event.currentTarget.classList.remove("invalid");
+        }  else{  
+            event.currentTarget.classList.add("invalid");
+            event.currentTarget.classList.remove("valid");
+        }
     }
